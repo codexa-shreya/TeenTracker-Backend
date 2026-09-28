@@ -1,0 +1,33 @@
+{
+  "name": "teen-expense-tracker-backend",
+  "version": "1.0.0",
+  "description": "REST API backend for TeenTrack - Teenager Expense Tracker",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "expense-tracker",
+    "teentrack",
+    "express",
+    "mvc",
+    "rest-api"
+  ],
+  "author": "TeenTrack Team",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.0.0",
+    "morgan": "^1.12.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
