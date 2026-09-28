@@ -44,7 +44,7 @@ routes/ ──► middleware/ ──► controllers/ ──► services/ ──�
   - `bcrypt` for one-way password hashing (salt rounds: 10)
   - `jsonwebtoken` (JWT) for stateless authenticated sessions
   - `helmet` for secure HTTP headers
-  - `cors` with restricted origin whitelist
+  - `cors` configured to allow all client domains dynamically with credential support
   - `express-rate-limit` for DDoS and brute-force protection
   - `zod` for strict request payload validation
   - Centralized error handler without production stack trace leaks

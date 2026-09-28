@@ -17,25 +17,11 @@ if (config.nodeEnv === 'development') {
   app.use(morgan('dev'));
 }
 
-// CORS configuration
+// CORS configuration — Allow all domains
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow non-browser requests (like curl, postman, server-to-server)
-    if (!origin) return callback(null, true);
-
-    const allowedOrigins = [
-      config.clientUrl,
-      'https://teen-tracker-frontend.vercel.app',
-      'http://localhost:5173',
-      'http://localhost:3000',
-      'http://127.0.0.1:5173'
-    ];
-
-    if (allowedOrigins.indexOf(origin) !== -1 || config.nodeEnv === 'development') {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
+    // Allow all origins dynamically (reflects request origin, supports credentials)
+    callback(null, true);
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],

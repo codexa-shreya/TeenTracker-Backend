@@ -16,7 +16,7 @@ export const getSystemStatus = (req, res) => {
     timestamp: new Date().toISOString(),
     security: {
       helmet: 'Enabled (Secure HTTP Headers)',
-      cors: `Configured for ${config.clientUrl}`,
+      cors: 'Enabled (All domains allowed)',
       rateLimiting: `Enabled (${config.rateLimitMax} reqs / ${config.rateLimitWindowMs / 60000} mins)`,
       validationEngine: 'Zod Schema Validator active'
     },
