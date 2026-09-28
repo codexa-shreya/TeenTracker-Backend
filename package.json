@@ -15,6 +15,11 @@
     "mvc",
     "rest-api"
   ],
+  "homepage": "https://teentracker-backend.onrender.com/api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codexa-shreya/TeenTracker-Backend.git"
+  },
   "author": "TeenTrack Team",
   "license": "ISC",
   "dependencies": {
